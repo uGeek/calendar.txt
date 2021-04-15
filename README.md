@@ -6,3 +6,6 @@
 ```
 
 
+```
+./calendartxt 365 > calendar.txt
+```
