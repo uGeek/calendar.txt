@@ -1,0 +1,20 @@
+#!/bin/bash
+#
+#  ./calendartxt 365   # 365 dias
+#
+#
+#
+#
+#
+
+DIAS=0
+date +'%Y-%m-%d W%V %a' --date "$(date +'%Y-%m-%d') +$DIAS day"
+VECES="$1"
+
+
+while [ $VECES -gt 0 ];
+do
+  DIAS=$(($DIAS+1))
+  date +'%Y-%m-%d W%V %a' --date "$(date +'%Y-%m-%d') +$DIAS day"
+  VECES=$(($VECES-1))
+done
